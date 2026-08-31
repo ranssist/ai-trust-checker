@@ -62,7 +62,7 @@ export function InputPanel(props: Props) {
                 onClick={() => onPickFixture(f)}
                 className={`rounded-lg border p-3 text-left transition ${
                   activeFixtureId === f.id
-                    ? 'border-blue-500 bg-blue-50 ring-1 ring-blue-500'
+                    ? 'border-gov-blue bg-gov-blue-50 ring-1 ring-gov-blue'
                     : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
@@ -85,7 +85,7 @@ export function InputPanel(props: Props) {
           rows={10}
           spellCheck={false}
           placeholder={'질문: 노벨 물리학상을 두 번 받은 사람이 있어?\n답변: 네, 마리 퀴리는 노벨 물리학상을 두 번 수상했습니다...'}
-          className="w-full resize-y rounded-lg border border-slate-200 bg-white p-3 font-mono text-[13px] leading-relaxed text-slate-800 placeholder:text-slate-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+          className="w-full resize-y rounded-lg border border-slate-200 bg-white p-3 font-mono text-[13px] leading-relaxed text-slate-800 placeholder:text-slate-300 focus:border-gov-blue focus:ring-1 focus:ring-gov-blue focus:outline-none"
         />
         <p className="mt-1 text-[11px] text-slate-400">
           "질문:" / "답변:" 라벨을 붙이면 더 정확합니다. 없으면 전체를 답변으로 봅니다.
@@ -98,7 +98,7 @@ export function InputPanel(props: Props) {
             type="checkbox"
             checked={useWebSearch}
             onChange={(e) => onWebSearchChange(e.target.checked)}
-            className="mt-0.5 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+            className="mt-0.5 h-4 w-4 rounded border-slate-300 text-gov-blue focus:ring-gov-blue"
           />
           <span className="text-sm text-slate-700">
             웹 검색으로 출처 대조
@@ -123,7 +123,7 @@ export function InputPanel(props: Props) {
         type="button"
         onClick={onSubmit}
         disabled={loading || liveBlocked || !text.trim()}
-        className="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+        className="w-full rounded-md bg-gov-blue px-4 py-3 text-sm font-semibold text-white transition hover:bg-gov-blue-dark disabled:cursor-not-allowed disabled:bg-slate-300"
       >
         {loading ? '검증 중…' : mode === 'fixture' ? '저장된 판정 결과 보기' : '실시간으로 검증하기'}
       </button>

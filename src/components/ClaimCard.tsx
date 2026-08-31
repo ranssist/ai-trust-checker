@@ -61,7 +61,7 @@ export function ClaimCard({ claim, index }: { claim: Claim; index: number }) {
                           href={e.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-medium text-blue-700 underline decoration-blue-300 underline-offset-2 hover:decoration-blue-600"
+                          className="font-medium text-gov-blue-dark underline decoration-gov-blue-100 underline-offset-2 hover:decoration-gov-blue"
                         >
                           {e.title}
                         </a>

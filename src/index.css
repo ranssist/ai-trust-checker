@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/* 정부24류 공공 서비스 UI에서 쓰는 톤 — 흰 배경 + 진한 파랑 포인트 + 넉넉한 여백.
+   실제 정부 사이트가 아니므로 로고/휘장은 흉내내지 않고, 배색·타이포·박스형 안내 같은
+   레이아웃 관례만 가져온다. */
+@theme {
+  --font-sans: 'Noto Sans KR', 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  --color-gov-blue: #256ef4;
+  --color-gov-blue-dark: #1a4fc4;
+  --color-gov-blue-50: #eef4fe;
+  --color-gov-blue-100: #dce9fd;
+  --color-gov-ink: #1e2124;
+}
+
+body {
+  font-family: var(--font-sans);
+}
